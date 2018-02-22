@@ -1,0 +1,13 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+script:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - docker image build -t zometer/svn2git .
+  - docker image push zometer/svn2git
+  - docker logout
+
