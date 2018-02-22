@@ -1,6 +1,6 @@
 FROM ubuntu:18.04 
 
 RUN apt-get update && \
-    apt-get -y install git-core git-svn ruby && \
+    apt-get -y install git-core git-svn ruby subversion && \
     gem install svn2git
 
